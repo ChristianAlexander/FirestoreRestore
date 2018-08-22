@@ -1,6 +1,8 @@
 # FirestoreRestore
 
-An *experimental* utility to export and import Google Cloud Firestore databases.
+[![Docker Automated build](https://img.shields.io/docker/automated/christianalexander/firestorerestore.svg?style=popout-square)](https://hub.docker.com/r/christianalexander/firestorerestore/)
+
+An _experimental_ utility to export and import Google Cloud Firestore databases.
 
 See the blog post at https://christianalexander.com/2018/07/18/firestore-backup-restore/
 
