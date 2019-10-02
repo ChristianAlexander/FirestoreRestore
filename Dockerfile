@@ -1,7 +1,9 @@
 FROM golang as build
 
-RUN mkdir -p /go/src/github.com/christianalexander/FirestoreRestore
-WORKDIR /go/src/github.com/christianalexander/FirestoreRestore
+WORKDIR /not-gopath
+
+COPY go.mod go.sum ./
+RUN go mod download
 
 COPY . .
 RUN make
@@ -10,7 +12,7 @@ FROM alpine as certificates
 RUN apk add --no-cache ca-certificates
 
 FROM scratch
-COPY --from=build /go/src/github.com/christianalexander/FirestoreRestore/FirestoreRestore /firestorerestore
+COPY --from=build /not-gopath/firestorerestore /
 COPY --from=certificates /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
 ENTRYPOINT ["/firestorerestore"]
