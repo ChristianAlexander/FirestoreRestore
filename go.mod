@@ -3,13 +3,14 @@ module github.com/christianalexander/firestorerestore
 go 1.13
 
 require (
-	cloud.google.com/go v0.25.0
-	github.com/golang/protobuf v1.1.0
+	cloud.google.com/go v0.25.0 // indirect
+	github.com/onsi/ginkgo v1.16.5 // indirect
+	github.com/onsi/gomega v1.27.1 // indirect
 	github.com/sirupsen/logrus v1.0.5
-	golang.org/x/crypto v0.0.0-20180718160520-a2144134853f
-	golang.org/x/net v0.0.0-20180719001425-81d44fd177a9
+	github.com/stretchr/testify v1.8.1 // indirect
 	golang.org/x/oauth2 v0.0.0-20180620175406-ef147856a6dd
-	golang.org/x/sys v0.0.0-20180715085529-ac767d655b30
 	google.golang.org/api v0.0.0-20180718221112-efcb5f25ac56
-	google.golang.org/appengine v1.1.0
+	google.golang.org/appengine v1.1.0 // indirect
+	gopkg.in/airbrake/gobrake.v2 v2.0.9 // indirect
+	gopkg.in/gemnasium/logrus-airbrake-hook.v2 v2.1.2 // indirect
 )
